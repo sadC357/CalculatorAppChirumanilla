@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimens name="fontSize"></dimens>36</dimens>
+    <dimen name="padding">15dp</dimen>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="fontSize">36sp</dimen>
 </resources>
