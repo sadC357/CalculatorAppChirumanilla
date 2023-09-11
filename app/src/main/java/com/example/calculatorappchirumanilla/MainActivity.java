@@ -3,12 +3,15 @@ package com.example.calculatorappchirumanilla;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int input_one;
-    private int input_two;
+    private TextView input;
+    private String in_string="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,16 +19,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public double addition(){
-        return (double) input_one+input_two;
+    public void setInputs(String val){
+        in_string=in_string+val;
+        input.setText(in_string+val);
     }
 
-    public double subtraction(){
-        return (double) input_one-input_two;
+    public void onClick(View view){
+        String buttonText=((Button)view).getText().toString();
+        setInputs(buttonText);
     }
 
-    public double division(){
-        return (double) input_one/input_two;
-    }
 
 }
