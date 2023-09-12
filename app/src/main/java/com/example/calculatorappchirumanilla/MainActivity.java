@@ -8,17 +8,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView in;
-    private String cur="";
-    private double val_1=0;
-    private String func="";
+    TextView in;
+    String cur="";
+    double val_1=0;
+    String func="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        in=findViewById(R.id.textView_display);
+        in=findViewById(R.id.textView_output);
         reset();
     }
 
@@ -48,11 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void equalsTo(View input) {
-        /* https://www.w3schools.com/java/ref_string_isempty.asp
-        isEmpty() checks to see if a string is empty or not
-        and returns true if it is empty
-         */
-        if (!cur.isEmpty() && !func.equals("%")) {
+        if (cur.length()!=0 && !func.equals("%")) {
                 /*https://www.geeksforgeeks.org/convert-string-to-double-in-java/
                 parseDouble() converts the String value into a double value
                  */
@@ -81,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
                 /*https://www.tutorialspoint.com/java/number_valueof.htm
                 valueOf() makes the double value into a String
-                in order to store it in a string variable
                  */
                 cur=String.valueOf(out_1);
                 func="";
@@ -91,8 +86,7 @@ public class MainActivity extends AppCompatActivity {
             double out_2=0.0;
             out_2=val_1/100;
             /*https://www.tutorialspoint.com/java/number_valueof.htm
-            valueOf() makes the double value into a String
-            in order to store it in a string variable
+            valueOf() returns the double value as a String
              */
             cur=String.valueOf(out_2);
             func="";
@@ -101,11 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void reset() {
-        /* https://www.w3schools.com/java/ref_string_isempty.asp
-        isEmpty() checks to see if a string is empty or not
-        and returns true if it is empty
-         */
-        if(cur.isEmpty()){
+        if(cur.length()==0){
             in.setText("0");
         }else{
             in.setText(cur);
