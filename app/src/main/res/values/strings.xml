@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">CalculatorAppChirumanilla</string>
+    <string name="Calculator_Display">Display View</string>
+    <string name="Text_View_Output">TV-output</string>
+    <string name="Clear_Button">Clear</string>
 </resources>
