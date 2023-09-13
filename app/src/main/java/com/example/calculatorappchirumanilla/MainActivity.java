@@ -8,10 +8,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView in;
-    String cur="";
-    double val_1=0;
-    String func="";
+    private TextView in;
+    private String cur="";
+    private double val_1=0;
+    private String func="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
